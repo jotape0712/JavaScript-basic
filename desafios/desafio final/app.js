@@ -1,12 +1,19 @@
+
 alert('Boas vindas ao jogo do número secreto');
-let numeroSecreto = parseInt(Math.random() * 10);
+
+let numeroMaximo = 1000
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
 console.log(numeroSecreto)
 let chute;
 let tentativas = 1;
+let margem = CSSMathMax.numeroSecreto
+    
 
-// Cria um loop que enquanto a variavel "chute" for diferente da variavel "numeroSecreto" o codigo continuara.
+
+
+
 while (chute != numeroSecreto) { 
-    chute = prompt('Qual o numero secreto? ')
+    chute = prompt(`Adivinhe o numero entre 1 e ${numeroMaximo}: `)
 
 
     
@@ -20,15 +27,15 @@ while (chute != numeroSecreto) {
         }  else {
             alert(`O numero secreto é menor que ${chute}!`)
         }
-        // tentativas = tentativas + 1
+        
         tentativas++; 
             
     }
 
 }  
 
-                                       // caso sim     \\ caso não
-let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'   // Podemos usar um IF diferente, usando da formula mostrada para definir dois diferentes caminhos.
+                                       
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'   
 
 
 alert(`Isso aí! Você descobriu o ${numeroSecreto} depois de ${tentativas} ${palavraTentativa}`);
